@@ -1,0 +1,29 @@
+/* Global ======================================*/
+:root {
+    --dark-blue: #363f5f;
+}
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+
+header {
+  margin: auto;
+}
+
+div{
+    padding-top: 15px;
+}
+
+a{
+    text-decoration: none;
+    color : black;
+}
