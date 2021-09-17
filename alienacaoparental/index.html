@@ -10,14 +10,6 @@
 
 
 
-    <style>
-        .chatElement {
-            height: 600px;
-            width: 100%;
-        }
-    </style>
-
-
 
 </head>
 
@@ -142,26 +134,7 @@
     </section>
 
 
-    <div class="watson">
-        <script>
 
-            window.watsonAssistantChatOptions = {
-                integrationID: "1a931c2f-d142-4d26-b527-909cc933de23", // The ID of this integration.
-                region: "us-south", // The region your integration is hosted in.
-                serviceInstanceID: "babf4dd3-e517-4990-9880-e0898968a6d8", // The ID of your service instance.
-                onLoad: function (instance) { instance.render(); }
-            };
-
-
-            setTimeout(function () {
-                const t = document.createElement('script');
-                t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"
-                document.head.appendChild(t);
-            });
-
-
-        </script>
-    </div>
     <div class="rodape">
 
         <nav>
@@ -242,6 +215,64 @@
         </nav>
 
     </div>
+
+    <button type="button" class="chatLauncher">
+        <div>
+            <img src="https://storage.googleapis.com/www.alienacaoparental.cf/img/logo/LOGO-ANFIPA.ico" alt=""
+                style="width: 60px;">
+        </div>
+
+        <div>
+            Quer saber mais a respeito de Alienação Parental? Click aqui!
+        </div>
+    </button>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "1a931c2f-d142-4d26-b527-909cc933de23", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "babf4dd3-e517-4990-9880-e0898968a6d8", // The ID of your service instance.
+            disclaimer: { isOn: true, disclaimerHTML: "Este site apresenta informações adquiridas por experiência própria ao longo dos anos e compartilha em nossos grupos de estudo. Porém não tem a intenção de substituir e ou desencorajar que você busque a ajuda de um profissional especialista. Se está ciente disso click em Sim." },
+
+            showLauncher: false,
+            onLoad: function (instance) {
+                // Aplica os atributos da tag button para a const button.
+                const button = document.querySelector('.chatLauncher')
+
+                // Aplica event listener para abrir o web chat quando o botão for clicado.
+                button.addEventListener('click', function clickListener() {
+                    instance.openWindow();
+                });
+                // Renderiza o web chat. Más ainda não mostra na página. 
+                // Porquê o botão ainda está como display: block.
+                // Agora a janela ficara fechada por padrão.
+                instance.render().then(function () {
+                    // Now that web chat has been rendered (but is still closed),
+                    // we make the custom launcher button visible.
+                    button.style.display = 'block';
+                    button.classList.add('open');
+
+                });
+
+                // o chat faz uma requisição assíncrona para renderizar os textos padrões escolhido, pois por padrão o idioma é o inglês.
+                instance.updateLocale('pt-br').then(function () {
+
+                    instance.render();
+                });
+
+            }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+
+
+        });
+
+
+
+    </script>
 
 </body>
 

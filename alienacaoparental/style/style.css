@@ -117,6 +117,63 @@ h1{
     display:none;
     
 }
+
+
+.chatLauncher{
+    display:none;
+}
+@keyframes slideInRight {
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+button.chatLauncher {
+    animation-duration: 0.5s;
+    transition-duration: 0.5s;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999;
+    border: 1px solid #000000;
+    padding: 1em;
+    border-radius: 8px;
+    margin: 0;
+    text-decoration: none;
+    background-color: #10ac3e;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 200px;
+    opacity: 0;
+}
+
+button.chatLauncher.open {
+    animation-name: slideInRight;
+    opacity: .9;
+}
+
+button.chatLauncher:hover,
+button.chatLauncher:focus {
+    background-color: #10ac3e;
+    color: rgb(0, 0, 0);
+    border: 1px solid #ffffff;
+    opacity: 1;
+}
+
+button.chatLauncher:focus {
+    outline: 1px solid #000000;
+    outline-offset: -4px;
+}
 /*RESPONSIVO*/
 
 @media only screen and (max-width: 850px) {
@@ -161,5 +218,28 @@ h1{
         margin: 0 50px 0 50px; 
     }
 
-}
+    button.chatLauncher {
+        animation-duration: 0.5s;
+        transition-duration: 0.5s;
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        z-index: 9999;
+        border: 1px solid #000000;
+        padding: 1em;
+        border-radius: 8px;
+        margin: 0;
+        text-decoration: none;
+        background-color: #10ac3e;
+        color: rgb(255, 255, 255);
+        font-family: sans-serif;
+        font-size: 10px;
+        cursor: pointer;
+        text-align: left;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        max-width: 100px;
+        opacity: 0;
+    }
 
+}
