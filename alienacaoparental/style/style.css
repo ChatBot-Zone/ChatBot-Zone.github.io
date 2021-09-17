@@ -174,9 +174,36 @@ button.chatLauncher:focus {
     outline: 1px solid #000000;
     outline-offset: -4px;
 }
+
+
+/* Footer ======================================*/
+footer {
+    text-align: center;
+    padding: 2rem 0 2rem;
+    color: var(--dark-blue);
+    font-size: 15px;
+    opacity: 0.6;
+
+}
+footer a {
+    color: inherit;
+}
+footer a:hover {
+    color: #126918;
+    font-size: 16px;
+}
+
 /*RESPONSIVO*/
 
 @media only screen and (max-width: 850px) {
+
+    .logoheader img{
+        object-fit:scale-down;
+        max-width: auto;
+        max-height:200px;
+        
+    }
+
     .menu{
         display:none;
     
