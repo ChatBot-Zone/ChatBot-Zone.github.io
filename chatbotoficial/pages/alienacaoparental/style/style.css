@@ -53,7 +53,7 @@ body{
   }
   
   .container1 .card .face{
-    width:980px;
+    width:990px;
     height: 350px;
     transition:.4s;
     
@@ -128,7 +128,14 @@ body{
     transform: translateY(0px);
     border-radius: 10px;
   }
+  .container1 .card .face.face2 h2{
   
+    text-align:left;
+    padding: 0px;
+    margin: 0px;
+    
+  
+  }
   .container1 .card:hover .face.face2{
       transform: translateY(0);
   
