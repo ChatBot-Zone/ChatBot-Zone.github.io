@@ -11,12 +11,11 @@ body{
     background: #5F5F5F;
     justify-content: center;
     align-items: center;
-    font-family:  'Poppins', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     display: inline-block;
     flex-wrap: wrap;
     letter-spacing: 0.5px;
     word-spacing: 1px;
-    
   }
   #avatarcard{
       border-radius: 20%;
@@ -27,6 +26,7 @@ body{
 
   #h3avatar{
     color: #ebaa14;
+    font-family: Arial, Helvetica, sans-serif;
   }
   #bemvindo{
       color:white;
@@ -44,6 +44,7 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
+    margin-top: 30px;
     
   }
   
@@ -66,27 +67,15 @@ body{
     align-content:center;
     align-items: center;
     z-index: 1;
-    transform: translateY(100px);
+    transform: translateY(0px);
+    box-shadow:
+        
+    0 0 50px rgba(255, 255, 255, 0.767),
+    -10px 0 50px #ffffffbb,
+    10px 0 50px rgba(255, 255, 255, 0.726);
 
     border-radius: 10px;
   }
-
-
-  
-  .container1 .card:hover .face.face1{
-  
-
-      transform: translateY(0px);
-      box-shadow:
-      0 0 50px #0ff,    
-      0 0 50px #ED8904,
-      -40px 0 100px #0ff,
-      40px 0 100px #ED8904;
-  
-      border-radius: 10px;
- 
-  }
-  
 
   
   .container1 .card .face.face1 .content{
@@ -133,9 +122,10 @@ body{
      align-items: center;
      justify-content: center;
      padding: 20px;
+     margin-top: 80px;
     box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0,0,0,.8);
-    transform: translateY(-250px);
+    box-shadow: 0 20px 80px rgba(0,0,0,1);
+    transform: translateY(0px);
     border-radius: 10px;
   }
   
@@ -146,7 +136,7 @@ body{
   }
   
   .container1 .card .face.face2 .content p, a{
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 ;
     padding: 0;
     color:#333;
@@ -183,7 +173,7 @@ body{
       text-align: center;
       padding: 2rem 0 2rem;
       color: black;
-  
+      margin-top: 15px;
       opacity: 0.6;
   
   }
@@ -192,7 +182,8 @@ body{
   }
   footer #whatsapp:hover {
       color: #000000;
-      font-size: 1.02rem;
+      font-size: 20px;
+      font-style: bold;
       text-shadow: 3px 5px 2px rgba(0,0,0,.5);
   }
 
@@ -241,96 +232,4 @@ body{
      
   }
   
-  /* 
-    .container2 .card:hover .face.face1{
-    transform: translateY(0);
-    box-shadow:
-      inset 0 0 60px rgba(245, 245, 245, 0.486),
-      inset 10px 0 80px #f0f,
-      inset -10px 0 80px #0ff,
  
-      0 0 50px #fff,
-      -10px 0 80px #f0f,
-      0px 0 80px #0ff;
-     
-  }
-  */
-  
-  .container2 .card .face.face1 .content{
-    opacity: .2;
-    transition:  0.5s;
-    text-align: center;
-    
-     
-    
-    
-   
-  
-  }
-  
-  .container2 .card:hover .face.face1 .content{
-    opacity: 1;
-   
-  }
-  
-  .container2 .card .face.face1 .content i{
-    font-size: 3em;
-    color: #4BC959;
-    display: inline-block;
-    
-     
-  }
-  
-  .container2 .card .face.face1 .content h3{
-    font-size: 1em;
-    color: white;
-    text-align: center;
-    
-  
-  }
-  
-  .container2 .card .face.face1 .content a{
-     transition: .5s;
-  }
-  
-  .container2 .card .face.face2{
-     position: relative;
-     background: whitesmoke;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0,0,0,.8);
-    transform: translateY(-100px);
-  }
-  
-  .container2 .card:hover .face.face2{
-      transform: translateY(0);
-  
-  
-  }
-  
-  .container2 .card .face.face2 .content p, a{
-    font-size: 10pt;
-    margin: 0 ;
-    padding: 0;
-    color:#333;
-  }
-  
-  .container2 .card .face.face2 .content a{
-    text-decoration:none;
-    color: black;
-    box-sizing: border-box;
-    outline : 1px dashed #333;
-    padding: 10px;
-    margin: 15px 0 0;
-    display: inline-block;
-  }
-  
-  .container2 .card .face.face2 .content a:hover{
-    background: #333 ;
-    color: whitesmoke; 
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-  }
-  

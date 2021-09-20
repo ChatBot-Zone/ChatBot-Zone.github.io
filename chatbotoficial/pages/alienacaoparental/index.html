@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="./ChatBotZone.ico">
+    <title>ChatBot-Zone: ANFIPA</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="container1">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img id="avatarcard" src="/ChatBotZone.ico" alt="icone">
+                    <h3 id="h3avatar">ChatBot-Zone</h3>
+                    <p id="bemvindo">Teste: "ALÊ E PATY"</p>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <h2>"Alê E Paty"</h2>
+                    <p>Este assistente virtual foi criado para a fase avançada "Botcamp" da Let's Bot.</p>
+                    <p>Ele usa os recursos de NLP (Processamento de linguagem natural) IBM® Watson.
+                        Um sistema cognitivo capaz de identificar e responder perguntas analisando apenas o contexto.
+                    </p>
+                    <p></p>
+                    <h3>Case real usado no Botcamp da Let'sbot.</h3>
+                    <p>ANFIPA - ASSOCIAÇÃO NACIONAL EM DEFESA DOS FILHOS PELA IGUALDADE PARENTAL.</p>
+                    <a href="http://www.alienacaoparental.cf" type="button">Site modelo</a>
+                </div>
+            </div>
+
+            <div class="face face2">
+                <div class="content">
+                    <p>ANFIPA foi criada com a missão de lutar pela Igualdade Parental em defesa dos direitos dos
+                        Filhos.
+                        Apoiando mães, pais e a todos os familiares que sofrem Alienação Parental.
+
+                    </p>
+                    </br>
+                    <p>OBS: Esse Bot está em fase de treinamento, e pode não responder a todas as suas perguntas. Nesse
+                        caso, pedimos paciência, pois mesmo que ele não compreenda e responda, todas as perguntas ficam
+                        registradas onde filtramos para fazer a curadoria. Nessa fase de curadoria, é o momento onde
+                        todas as respostas erradas serão corrigidas e novas informações serão incluídas. Certo disso,
+                        pergunte tudo que gostaria de saber sobre o assunto. Assim temos a oportunidade de turbinar
+                        nossa próxima versão com o material registrado.</p>
+                    <a href="../../../index.html" type="button">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a id="whatsapp" href="https://wa.me/message/AQ7U4XTPJZR6I1" title="What'sApp"
+            style="text-decoration:none">ChatBot
+            Zone por Karla e Pablo</a>
+    </footer>
+
+    <button type="button" class="chatLauncher">
+        <div>
+            <img src="https://storage.googleapis.com/www.alienacaoparental.cf/img/logo/LOGO-ANFIPA.ico" alt=""
+                style="width: 60px;">
+        </div>
+
+        <div>
+            Quer saber mais a respeito de Alienação Parental? Click aqui!
+        </div>
+    </button>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "1a931c2f-d142-4d26-b527-909cc933de23", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "babf4dd3-e517-4990-9880-e0898968a6d8", // The ID of your service instance.
+            disclaimer: { isOn: true, disclaimerHTML: "Este site apresenta informações adquiridas por experiência pessoal ao longo dos anos. E pesquisas em grupos específicos. Sem a intenção de substituir as orientações de um profissional especialista. Caso esteja ciente e queira continuar, click em Aceito." },
+
+            showLauncher: false,
+            onLoad: function (instance) {
+                // Aplica os atributos da tag button para a const button.
+                const button = document.querySelector('.chatLauncher')
+
+                // Aplica event listener para abrir o web chat quando o botão for clicado.
+                button.addEventListener('click', function clickListener() {
+                    instance.openWindow();
+                });
+                // Renderiza o web chat. Más ainda não mostra na página. 
+                // Porquê o botão ainda está como display: block.
+                // Agora a janela ficara fechada por padrão.
+                instance.render().then(function () {
+                    // Now that web chat has been rendered (but is still closed),
+                    // we make the custom launcher button visible.
+                    button.style.display = 'block';
+                    button.classList.add('open');
+
+                });
+
+                // o chat faz uma requisição assíncrona para renderizar os textos padrões escolhido, pois por padrão o idioma é o inglês.
+                instance.updateLocale('pt-br').then(function () {
+
+                    instance.render();
+                });
+
+            }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

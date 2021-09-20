@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="./ChatBotZone.ico">
+    <title>ChatBot-Zone: OGREEN</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="container1">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img id="avatarcard" src="/ChatBotZone.ico" alt="icone">
+                    <h3 id="h3avatar">ChatBot-Zone</h3>
+                    <p id="bemvindo">Teste: "OGREEN"</p>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <h2>"OGREEN"</h2>
+                    <p>Um assistente virtual criado especialmente para o "Botcamp" da Let's Bot.</p>
+                    <p>Esse Chatbot usa os recursos de NLP (Processamento de linguagem natural) IBM® Watson.
+                        Um sistema cognitivo capaz de identificar e responder perguntas analisando apenas o contexto.
+                    </p>
+                    <p></p>
+                    <h3>Case real usado no Botcamp da Let'sbot.</h3>
+                    <p>VegPet - Indústria de ração vegana e vegetariana para cães e gatos.</p>
+                </div>
+            </div>
+
+            <div class="face face2">
+                <div class="content">
+                    <p>Nosso Bot foi programado para responder perguntas de FAQ, reproduzir imagens dos produtos quando
+                        solicitado, direcionar ao atendimento para realizar sua compra, até informar status da entrega
+                        do pedido (via código de rastreamento dos Correios).
+
+                    </p>
+                    <p>OBS: Esse Bot está em fase de treinamento, e pode não responder a todas as suas perguntas. Nesse
+                        caso, pedimos paciência, pois mesmo que ele não compreenda e responda, todas as perguntas ficam
+                        registradas onde filtramos para fazer a curadoria. Nessa fase de curadoria, é o momento onde
+                        todas as respostas erradas serão corrigidas e novas informações serão incluídas. Certo disso,
+                        pergunte tudo que gostaria de saber sobre o assunto. Assim temos a oportunidade de turbinar
+                        nossa próxima versão com o material registrado.</p>
+                    <a href="../../../index.html" type="button">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a id="whatsapp" href="https://wa.me/message/AQ7U4XTPJZR6I1" title="What'sApp"
+            style="text-decoration:none">ChatBot
+            Zone por Karla e Pablo</a>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "14d41762-66bb-48a6-9277-13efc64ab805", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "124940db-44e1-480a-ae6b-c98ed249e485", // The ID of your service instance.
+            onLoad: function (instance) { instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+        });
+    </script>
+</body>
+
+</html>
