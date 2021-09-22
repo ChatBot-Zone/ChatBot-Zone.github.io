@@ -82,18 +82,10 @@ body{
     opacity: .8;
     transition:  0.5s;
     text-align: center;
-    
-     
-    
-    
-   
-  
-  }
-  
-  .container1 .card:hover .face.face1 .content{
-    opacity: 1;
    
   }
+  
+
   
   .container1 .card .face.face1 .content i{
     font-size: 3em;
@@ -136,11 +128,7 @@ body{
     
   
   }
-  .container1 .card:hover .face.face2{
-      transform: translateY(0);
-  
-  
-  }
+
   
   .container1 .card .face.face2 .content p, a{
     font-size: 18px;
@@ -168,13 +156,7 @@ body{
     
   }
   
-  .container1 .card .face.face2 .content a:hover{
-    background: #333 ;
-    color: whitesmoke; 
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-    
-  }
-  
+
 
   footer {
       text-align: center;
@@ -226,18 +208,7 @@ body{
     transform: translateY(100px);
   }
   
-  .container2 .card:hover .face.face1{
-    transform: translateY(0);
-    box-shadow:
-      inset 0 0 60px rgba(245, 245, 245, 0.486),
-      inset 10px 0 80px #ED8904,
-      inset -10px 0 80px #0ff,
- 
-      0 0 50px #fff,
-      -10px 0 80px #ED8904,
-      0px 0 80px #0ff;
-     
-  }
+
   
   .chatLauncher{
     display:none;
@@ -294,3 +265,128 @@ button.chatLauncher:focus {
   outline: 1px solid #000000;
   outline-offset: -4px;
 }
+
+@media screen and (min-device-width: 800px) and (max-device-width: 900px){
+  .container1{
+    width: 800px;
+    
+  }
+  .container1 .card .face{
+    width:700px;
+    height: 360px;
+    
+    
+  }
+
+  #bemvindo{
+  font-size: 26px;
+  margin-bottom: 5px;
+  }
+
+  .container1 .card .face2{
+    height: 460px;
+    
+  }
+
+  
+
+}
+
+@media screen and (min-device-width: 700px) and (max-device-width: 799px){
+  .container1{
+    width: 800px;
+    
+  }
+  .container1 .card .face{
+    width:600px;
+    height: 330px;
+    
+    
+  }
+
+  #bemvindo{
+    font-size: 26px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    }
+
+  .container1 .card .face2{
+    height: 550px;
+    
+    
+  }
+}
+
+@media screen and (min-device-width: 511px) and (max-device-width: 699px){
+  .container1{
+    width: 500px;
+    
+  }
+  .container1 .card .face{
+    width:400px;
+    height: 300px;
+    
+    
+  }
+
+  #h3avatar{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #bemvindo{
+    font-size: 26px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    }
+
+
+  .container1 .card .face2{
+    height: 600px;
+    
+    
+  }
+
+  #facebottom{
+    height: 750px;
+  }
+
+}
+
+@media screen and (min-device-width: 100px) and (max-device-width: 510px){
+  .container1{
+    width: 500px;
+    
+  }
+  .container1 .card .face{
+    width:400px;
+    height: 280px;
+    
+    
+  }
+
+  #h3avatar{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #bemvindo{
+    font-size: 26px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    }
+
+
+  .container1 .card .face2{
+    height: 600px;
+    
+    
+  }
+
+  #facebottom{
+    height: 755px;
+  }
+
+ 
+}
+
