@@ -311,9 +311,13 @@ button.chatLauncher:focus {
     }
 
   .container1 .card .face2{
+    height: 470px;
+    
+    
+  }
+
+  #facebottom{
     height: 550px;
-    
-    
   }
 }
 
